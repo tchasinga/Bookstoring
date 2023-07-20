@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import BookList from './Components/BookList';
-import BookForm from './Components/BookForm';
 import Navigation from './Components/Navigation';
+import Categories from './Components/categories';
 
 const App = () => {
   const [books, setBooks] = useState([
@@ -10,11 +10,6 @@ const App = () => {
     { id: 2, title: 'Book 2', author: 'Author 2' },
     // Add more sample books or start with an empty array
   ]);
-
-  const handleAddBook = (newBook) => {
-    // Add the new book to the state
-    setBooks([...books, newBook]);
-  };
 
   const handleDeleteBook = (id) => {
     // Delete the book with the given id from the state
@@ -29,11 +24,13 @@ const App = () => {
         <Routes>
           <Route
             path="/"
+            exact
             element={<BookList books={books} onDelete={handleDeleteBook} />}
           />
           <Route
-            path="/create"
-            element={<BookForm onAddBook={handleAddBook} />}
+            path="/Categories"
+            exact
+            element={<Categories />}
           />
         </Routes>
       </div>
