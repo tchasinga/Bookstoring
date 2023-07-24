@@ -6,7 +6,7 @@ import BookList from './Components/BookList';
 import Navigation from './Components/Navigation';
 import Categories from './Components/categories';
 
-// here I've react-router-dom v6 fix all errors
+// here I've react-router-dom v6 fix
 const App = () => (
   <Provider store={Store}>
     <Router>
