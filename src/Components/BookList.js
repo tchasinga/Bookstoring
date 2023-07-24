@@ -1,41 +1,36 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Book from './Book';
 import BookForm from './BookForm';
+import { addBook, removeBook } from './Bookslice';
 
-const BookList = ({ books, onDelete }) => {
-  const [bookList, setBookList] = useState(books);
+const BookList = () => {
+  const books = useSelector((state) => state.books.books);
+  const dispatch = useDispatch();
+
+  const handleDeleteBook = (id) => {
+    // Dispatch the removeBook action to remove the book with the given id
+    dispatch(removeBook(id));
+  };
 
   const handleAddBook = (newBook) => {
-    // Add the new book to the state
-    setBookList([...bookList, newBook]);
+    // Dispatch the addBook action to add the new book
+    dispatch(addBook(newBook));
   };
 
   return (
     <div>
-      {bookList.map((book) => (
+      {books.map((book) => (
         <Book
           key={book.id}
           title={book.title}
           author={book.author}
-          onDelete={() => onDelete(book.id)}
+          onDelete={() => handleDeleteBook(book.id)}
         />
       ))}
       <BookForm onAddBook={handleAddBook} />
     </div>
   );
-};
-
-// Prop-type validation for BookList component
-BookList.propTypes = {
-  books: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      author: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
-  onDelete: PropTypes.func.isRequired,
 };
 
 export default BookList;

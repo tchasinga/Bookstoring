@@ -32,7 +32,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖  Bookstore: initialize project with components <a name="about-project"></a>
+# 📖  Bookstore: add reducers and actions <a name="about-project"></a>
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -138,9 +138,9 @@ Coming Soon
 Contributions, issues, and feature requests are welcome!
 
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b 'Inisialization'`)
-3. Commit your Changes (`git commit -m 'Add some Inisialization'`)
-4. Push to the Branch (`git push origin Inisialization`)
+2. Create your Feature Branch (`git checkout -b 'ReducerReduxToolkit'`)
+3. Commit your Changes (`git commit -m 'Add some ReducerReduxToolkit'`)
+4. Push to the Branch (`git push origin ReducerReduxToolkit`)
 5. Open a Pull Request
 
 Your ideas are welcom and just feel free [just click](https://github.com/tchasinga/bookstoring/issues/1).
