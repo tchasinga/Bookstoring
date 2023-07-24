@@ -11,6 +11,7 @@ const bookSlice = createSlice({
     addBook: (state, action) => {
       state.books.push(action.payload);
     },
+    // I've fixed thta given requirement
     removeBook: (state, action) => ({
       ...state,
       books: state.books.filter((book) => book.id !== action.payload),

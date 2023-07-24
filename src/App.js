@@ -6,6 +6,7 @@ import BookList from './Components/BookList';
 import Navigation from './Components/Navigation';
 import Categories from './Components/categories';
 
+// here I've react-router-dom v6
 const App = () => (
   <Provider store={store}>
     <Router>
