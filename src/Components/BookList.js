@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Book from './Book';
 import BookForm from './BookForm';
-import { addBook, removeBook } from './Bookslice';
+import { addBook, removeBook } from '../redux/Bookslice';
 
 const BookList = () => {
   const books = useSelector((state) => state.books.books);

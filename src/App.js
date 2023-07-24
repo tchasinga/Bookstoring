@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import store from './redux/Store';
+import store from './redux/store';
 import BookList from './Components/BookList';
 import Navigation from './Components/Navigation';
 import Categories from './Components/categories';
