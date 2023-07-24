@@ -1,41 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import Store from './redux/Storage';
 import BookList from './Components/BookList';
 import Navigation from './Components/Navigation';
 import Categories from './Components/categories';
 
-const App = () => {
-  const [books, setBooks] = useState([
-    { id: 1, title: 'Book 1', author: 'Author 1' },
-    { id: 2, title: 'Book 2', author: 'Author 2' },
-    // Add more sample books or start with an empty array
-  ]);
-
-  const handleDeleteBook = (id) => {
-    // Delete the book with the given id from the state
-    setBooks(books.filter((book) => book.id !== id));
-  };
-
-  return (
+// here I've react-router-dom v6 fix
+const App = () => (
+  <Provider store={Store}>
     <Router>
       <div>
         <Navigation />
 
         <Routes>
-          <Route
-            path="/"
-            exact
-            element={<BookList books={books} onDelete={handleDeleteBook} />}
-          />
-          <Route
-            path="/Categories"
-            exact
-            element={<Categories />}
-          />
+          <Route exact path="/" element={<BookList />} />
+          <Route exact path="/Categories" element={<Categories />} />
         </Routes>
       </div>
     </Router>
-  );
-};
+  </Provider>
+);
 
 export default App;
