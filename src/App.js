@@ -12,7 +12,6 @@ const App = () => (
     <Router>
       <div>
         <Navigation />
-
         <Routes>
           <Route exact path="/" element={<BookList />} />
           <Route exact path="/Categories" element={<Categories />} />
