@@ -25,6 +25,7 @@
   - [Deployment](#deployment-)
     - [`npm run build`](#npm-run-build)
   - [👥 Author](#-author-)
+  - [🔭 Future Features]
   - [🤝 Contributing](#-contributing-)
   - [⭐️ Show your support](#️-show-your-support-)
   - [🙏 Acknowledgments](#-acknowledgments-)
@@ -132,6 +133,14 @@ Coming Soon
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
+
+🔭 Future Features
+=====================================================
+here's the list of coming features :
+
+> Adding Apis
+> Apply a full CRUD using and online backend
+> Upload a secure blog-App
 
 ## 🤝 Contributing <a name="contributing"></a>
 
