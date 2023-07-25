@@ -136,6 +136,7 @@ Coming Soon
 
 🔭 Future Features
 =====================================================
+
 here's the list of coming features :
 
 > Adding Apis
