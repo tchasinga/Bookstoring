@@ -1,14 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+const Button = ({ onClick, children }) => (
+  <button type="button" onClick={onClick}>
+    {children}
+  </button>
+);
+
+Button.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  children: PropTypes.node.isRequired,
+};
+
 const Book = ({ title, author, onDelete }) => (
   <div>
     <h3>{title}</h3>
     <p>
       Author:
+      {' '}
       {author}
     </p>
-    <button type="button" onClick={onDelete}>Delete</button>
+    <Button onClick={onDelete}>Delete</Button>
   </div>
 );
 

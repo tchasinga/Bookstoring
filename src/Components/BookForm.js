@@ -1,6 +1,17 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
+const Button = ({ onClick, children }) => (
+  <button type="button" onClick={onClick}>
+    {children}
+  </button>
+);
+
+Button.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  children: PropTypes.node.isRequired,
+};
+
 const BookForm = ({ onAddBook }) => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
@@ -31,7 +42,7 @@ const BookForm = ({ onAddBook }) => {
         value={author}
         onChange={(e) => setAuthor(e.target.value)}
       />
-      <button type="submit">Add Book</button>
+      <Button type="submit">Add Book</Button>
     </form>
   );
 };
