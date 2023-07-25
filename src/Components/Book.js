@@ -1,27 +1,28 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-const Book = ({ title, author, onDelete }) => {
-  const [isDeleting, setIsDeleting] = useState(false);
+const Button = ({ onClick, children }) => (
+  <button type="button" onClick={onClick}>
+    {children}
+  </button>
+);
 
-  const handleDelete = () => {
-    setIsDeleting(true);
-    // Call your delete book API or perform any other delete action
-    onDelete();
-  };
-
-  return (
-    <div>
-      <h3>{title}</h3>
-      <p>
-        Author:
-        {author}
-      </p>
-      {!isDeleting && <button type="button" onClick={handleDelete}>Delete</button>}
-      {isDeleting && <p>Deleting...</p>}
-    </div>
-  );
+Button.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  children: PropTypes.node.isRequired,
 };
+
+const Book = ({ title, author, onDelete }) => (
+  <div>
+    <h3>{title}</h3>
+    <p>
+      Author:
+      {' '}
+      {author}
+    </p>
+    <Button onClick={onDelete}>Delete</Button>
+  </div>
+);
 
 // Prop-type validation for Book component
 Book.propTypes = {

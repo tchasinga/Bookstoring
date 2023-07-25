@@ -7,8 +7,12 @@ const BookForm = ({ onAddBook }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Call your add book API or perform any other add action
-    onAddBook({ title, author });
+    onAddBook({
+      item_id: `item${Date.now()}`, // Use a timestamp for a unique item_id
+      title,
+      author,
+      category: 'Fiction', // You can customize the category or add a category input in the form
+    });
     setTitle('');
     setAuthor('');
   };
@@ -18,16 +22,18 @@ const BookForm = ({ onAddBook }) => {
       <input
         type="text"
         placeholder="Title"
+        required
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
       <input
         type="text"
         placeholder="Author"
+        required
         value={author}
         onChange={(e) => setAuthor(e.target.value)}
       />
-      <button type="submit">Add Book</button>
+      <input type="submit" value="Add Book" />
     </form>
   );
 };

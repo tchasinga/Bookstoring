@@ -9,12 +9,10 @@ const BookList = () => {
   const dispatch = useDispatch();
 
   const handleDeleteBook = (id) => {
-    // Dispatch the removeBook action to remove the book with the given id
     dispatch(removeBook(id));
   };
 
   const handleAddBook = (newBook) => {
-    // Dispatch the addBook action to add the new book
     dispatch(addBook(newBook));
   };
 
@@ -22,10 +20,10 @@ const BookList = () => {
     <div>
       {books.map((book) => (
         <Book
-          key={book.id}
+          key={book.item_id}
           title={book.title}
           author={book.author}
-          onDelete={() => handleDeleteBook(book.id)}
+          onDelete={() => handleDeleteBook(book.item_id)}
         />
       ))}
       <BookForm onAddBook={handleAddBook} />
