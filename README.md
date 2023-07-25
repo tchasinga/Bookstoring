@@ -139,9 +139,9 @@ Coming Soon
 
 here's the list of coming features :
 
-> Adding Apis
-> Apply a full CRUD using and online backend
-> Upload a secure blog-App
+* Adding Apis
+* Apply a full CRUD using and online backend
+* Upload a secure blog-App
 
 ## 🤝 Contributing <a name="contributing"></a>
 
