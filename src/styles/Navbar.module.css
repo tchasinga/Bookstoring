@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container ul {
+  list-style-type: none;
+  display: flex;
+  margin: 10px;
+}
+
+.container ul li {
+  margin: 10px;
+}
+
+.bookLink {
+  text-decoration: none;
+  color: #121212;
+}
+
+.categoryLink {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.icon {
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 24px;
+}
+
+.color {
+  color: #0290ff;
+}
+
+.display {
+  display: flex;
+  align-items: center;
+}

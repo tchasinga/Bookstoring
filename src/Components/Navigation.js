@@ -1,17 +1,26 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-const Navigation = () => (
-  <nav>
-    <ul>
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-      <li>
-        <Link to="/Categories">Categories</Link>
-      </li>
-    </ul>
-  </nav>
+const Navbar = () => (
+  <div className="container">
+    <div className="display">
+      <h1 className="color">Bookstore CMS</h1>
+      <ul>
+        <li>
+          <NavLink to="/" className="bookLink">
+            Books
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="categories" className="categoryLink">
+            Categories
+          </NavLink>
+        </li>
+      </ul>
+    </div>
+    <div className="icon">
+      <h4>Welcom now</h4>
+    </div>
+  </div>
 );
 
-export default Navigation;
+export default Navbar;

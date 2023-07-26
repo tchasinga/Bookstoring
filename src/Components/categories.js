@@ -1,7 +1,8 @@
-const Categories = () => (
-  <div>
-    <h1>this is a categories</h1>
-  </div>
-);
+const Categories = () => {
+  const heading = {
+    'text-align': 'center',
+  };
+  return <h1 style={heading}>This is Category section</h1>;
+};
 
 export default Categories;

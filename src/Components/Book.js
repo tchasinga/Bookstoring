@@ -1,34 +1,30 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
+import BookState from 'Components/BookState';
+import AddBook from 'Components/BookAdd';
+import { fetchBooks } from 'redux/books/booksSlice';
+import { useEffect } from 'react';
 
-const Button = ({ onClick, children }) => (
-  <button type="button" onClick={onClick}>
-    {children}
-  </button>
-);
+const Books = () => {
+  const { books } = useSelector((store) => store.books);
+  const dispatch = useDispatch();
 
-Button.propTypes = {
-  onClick: PropTypes.func.isRequired,
-  children: PropTypes.node.isRequired,
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, [dispatch]);
+
+  return (
+    <div>
+      {books.map((item) => (
+        <BookState
+          key={item.item_id}
+          title={item.title}
+          category={item.category}
+          author={item.author}
+          id={item.item_id}
+        />
+      ))}
+      <AddBook />
+    </div>
+  );
 };
-
-const Book = ({ title, author, onDelete }) => (
-  <div>
-    <h3>{title}</h3>
-    <p>
-      Author:
-      {' '}
-      {author}
-    </p>
-    <Button onClick={onDelete}>Delete</Button>
-  </div>
-);
-
-// Prop-type validation for Book component
-Book.propTypes = {
-  title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
-  onDelete: PropTypes.func.isRequired,
-};
-
-export default Book;
+export default Books;
