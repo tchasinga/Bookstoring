@@ -1,11 +1,9 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import Store from './redux/Storage';
-import BookList from './Components/BookList';
-import Navigation from './Components/Navigation';
-import Categories from './Components/categories';
+import { Routes, Route, Outlet } from 'react-router-dom';
+import Books from 'components/Books';
+import Categories from 'components/Categories';
+import Navbar from 'components/Navbar';
 
+<<<<<<< Updated upstream
 // here I've react-router-dom v6 fix
 const App = () => (
   <Provider store={Store}>
@@ -20,6 +18,23 @@ const App = () => (
       </div>
     </Router>
   </Provider>
+=======
+const Layout = () => (
+  <>
+    <Navbar />
+    <Outlet />
+  </>
+>>>>>>> Stashed changes
 );
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Books />} />
+        <Route path="categories" element={<Categories />} />
+      </Route>
+    </Routes>
+  );
+}
 
 export default App;
