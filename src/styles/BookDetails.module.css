@@ -1,8 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,regular,500,600,700,800,900);
 
-
-*{
-  font-family: 'Roboto+slab' , sans-serif;
+* {
+  font-family: 'Roboto+slab', sans-serif;
 }
 
 .container {
@@ -24,9 +23,12 @@ p {
   margin: 0;
 }
 
-.progressDiv{
+.progressDiv {
   border-right: 2px rgb(207, 207, 207) solid;
   margin-right: 80px;
+  display: flex;
+  width: 100%;
+  align-items: center;
 }
 
 .details h4 {
@@ -88,12 +90,12 @@ p {
   bottom: 10%;
 }
 
-.clooner h2{
+.clooner h2 {
   font-weight: 100;
   font-size: 30px;
 }
 
-.clooner p{
+.clooner p {
   font-weight: 100;
   color: rgb(216, 216, 216);
 }
@@ -112,10 +114,4 @@ p {
   border-radius: 50%;
   border: 5px solid #0290ff;
   margin: 20px;
-}
-
-.progressDiv {
-  display: flex;
-  width: 100%;
-  align-items: center;
 }
