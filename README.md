@@ -33,7 +33,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖  Bookstore: add reducers and actions <a name="about-project"></a>
+# 📖  Bookstore adding a design <a name="about-project"></a>
 
 ## 🛠 Built With <a name="built-with"></a>
 

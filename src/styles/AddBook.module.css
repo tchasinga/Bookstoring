@@ -1,7 +1,6 @@
 .container h3 {
-  color: #888;
-
-  /* padding-left: 140px; */
+  padding: 6px;
+  color: #747474;
   margin: 0 10%;
 }
 
@@ -13,6 +12,11 @@ form {
 
 input {
   border: 1px solid #c4c4c4;
+}
+
+.getbookAdd {
+  margin: 20px;
+  color: #0290ff;
 }
 
 input[type="text"]:nth-child(1) {

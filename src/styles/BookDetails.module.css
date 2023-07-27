@@ -1,3 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,regular,500,600,700,800,900);
+
+* {
+  font-family: 'Roboto+slab', sans-serif;
+}
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -15,6 +21,14 @@
 h4,
 p {
   margin: 0;
+}
+
+.progressDiv {
+  border-right: 1px rgb(207, 207, 207) solid;
+  margin-right: 80px;
+  display: flex;
+  width: 100%;
+  align-items: center;
 }
 
 .details h4 {
@@ -57,6 +71,9 @@ p {
 }
 
 .updateProgress {
+  margin-top: 0;
+  padding: 0;
+  line-height: 10px;
   width: 80%;
 }
 
@@ -67,8 +84,29 @@ p {
   padding: 5px 10px;
 }
 
+.clooner {
+  line-height: 5px;
+  position: relative;
+  bottom: 10%;
+}
+
+.clooner h2 {
+  font-weight: 100;
+  font-size: 30px;
+}
+
+.clooner p {
+  font-weight: 100;
+  color: rgb(216, 216, 216);
+}
+
 .updateProgress h3 {
-  font-weight: 80;
+  font-weight: 100;
+  color: rgb(202, 200, 200);
+}
+
+.updateProgress h2 {
+  font-weight: 100;
 }
 
 .updateProgress h3:nth-child(2) {
@@ -81,10 +119,4 @@ p {
   border-radius: 50%;
   border: 5px solid #0290ff;
   margin: 20px;
-}
-
-.progressDiv {
-  display: flex;
-  width: 100%;
-  align-items: center;
 }

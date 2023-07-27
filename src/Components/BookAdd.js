@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
+import styles from 'styles/AddBook.module.css';
 import { createBook } from 'redux/books/booksSlice';
 
 const AddBook = () => {
@@ -33,8 +34,8 @@ const AddBook = () => {
     }
   };
   return (
-    <div className="container">
-      <h3>ADD NEW BOOK</h3>
+    <div className={styles.container}>
+      <h3 className={styles.getbookAdd}>ADD NEW BOOK</h3>
       <form onSubmit={handleFormSubmit}>
         <input
           type="text"
@@ -57,5 +58,4 @@ const AddBook = () => {
     </div>
   );
 };
-
 export default AddBook;

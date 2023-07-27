@@ -1,6 +1,5 @@
 import Book from 'Components/Book';
-// the Categoris was in lowercase now I've put in Uppercase and the issue are fixed
-import Categories from 'Components/Categories';
+import Categories from 'Components/Messages';
 import Navbar from 'Components/Navigation';
 import { Routes, Route, Outlet } from 'react-router-dom';
 

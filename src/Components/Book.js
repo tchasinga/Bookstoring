@@ -2,6 +2,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import BookState from 'Components/BookState';
 import AddBook from 'Components/BookAdd';
 import { fetchBooks } from 'redux/books/booksSlice';
+import '../styles/BookDetails.module.css';
+import '../styles/AddBook.module.css';
 import { useEffect } from 'react';
 
 const Books = () => {
