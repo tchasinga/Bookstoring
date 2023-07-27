@@ -24,7 +24,7 @@ p {
 }
 
 .progressDiv {
-  border-right: 2px rgb(207, 207, 207) solid;
+  border-right: 1px rgb(207, 207, 207) solid;
   margin-right: 80px;
   display: flex;
   width: 100%;
@@ -101,7 +101,12 @@ p {
 }
 
 .updateProgress h3 {
-  font-weight: 200;
+  font-weight: 100;
+  color: rgb(202, 200, 200);
+}
+
+.updateProgress h2 {
+  font-weight: 100;
 }
 
 .updateProgress h3:nth-child(2) {

@@ -38,7 +38,7 @@ const BookState = ({
         </div>
         <div className={styles.updateProgress}>
           <h3>CURRENT CHAPTER</h3>
-          <h3>Chapter 17</h3>
+          <h2>Chapter 17</h2>
           <button type="button">UPDATE PROGRESS</button>
         </div>
       </div>
