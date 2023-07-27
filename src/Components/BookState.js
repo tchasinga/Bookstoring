@@ -31,7 +31,7 @@ const BookState = ({
       <div className={styles.progress}>
         <div className={styles.progressDiv}>
           <div className={styles.progressBar} />
-          <div>
+          <div className={styles.clooner}>
             <h2>80 %</h2>
             <p>completed</p>
           </div>

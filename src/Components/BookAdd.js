@@ -35,7 +35,7 @@ const AddBook = () => {
   };
   return (
     <div className={styles.container}>
-      <h3>ADD NEW BOOK</h3>
+      <h3 className={styles.getbookAdd}>ADD NEW BOOK</h3>
       <form onSubmit={handleFormSubmit}>
         <input
           type="text"
