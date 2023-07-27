@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router-dom';
-// import { FaUserAlt } from 'react-icons/fa';
 import styles from 'styles/Navbar.module.css';
 
 const Navbar = () => (

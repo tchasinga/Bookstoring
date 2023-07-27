@@ -1,7 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,regular,500,600,700,800,900);
 
-* {
-  font-family: 'Poppins', sans-serif;
+
+*{
+  font-family: 'Roboto+slab' , sans-serif;
 }
 
 .container {
@@ -21,6 +22,11 @@
 h4,
 p {
   margin: 0;
+}
+
+.progressDiv{
+  border-right: 2px rgb(207, 207, 207) solid;
+  margin-right: 80px;
 }
 
 .details h4 {
@@ -78,7 +84,18 @@ p {
 
 .clooner {
   line-height: 5px;
-  align-items: center;
+  position: relative;
+  bottom: 10%;
+}
+
+.clooner h2{
+  font-weight: 100;
+  font-size: 30px;
+}
+
+.clooner p{
+  font-weight: 100;
+  color: rgb(216, 216, 216);
 }
 
 .updateProgress h3 {
